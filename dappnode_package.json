@@ -1,0 +1,29 @@
+{
+  "name": "graph.public.dappnode.eth",
+  "version": "0.1.0",
+  "description": "The Graph is an indexing protocol for querying networks like Ethereum and IPFS. Anyone can build and publish open APIs, called subgraphs, making data easily accessible.",
+  "upstreamRepo": "graphprotocol/graph-node",
+  "type": "service",
+  "author": "DAppNode Association <admin@dappnode.io> (https://github.com/dappnode)",
+  "contributors": ["pablo <pablo@dappnode.io> (https://github.com/pablomendezroyo)"],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dappnode/DAppNodePackage-graph.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dappnode/DAppNodePackage-graph/issues"
+  },
+  "backup": [
+    {
+      "name": "graph_data",
+      "path": "/data",
+      "service": "postgres"
+    }
+  ],
+  "categories": ["Developer tools", "ETH2.0"],
+  "links": {
+    "homepage": "https://thegraph.com/docs/"
+  },
+  "license": "GLP-3.0"
+}
+

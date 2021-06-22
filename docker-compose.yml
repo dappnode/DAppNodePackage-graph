@@ -1,0 +1,53 @@
+version: "3.5"
+networks:
+  dncore_network:
+    name: dncore_network
+    external: true
+volumes:
+  graph_data: {}
+services:
+  graph.dnp.dappnode.eth:
+    container_name: DAppNodePackage-graph.graph.dnp.dappnode.eth
+    image: "graph.dnp.dappnode.eth.graph.public.dappnode.eth:0.1.0"
+    build:
+      context: build
+    ports:
+      - "8000:8000"
+      - "8001:8001"
+      - "8020:8020"
+      - "8030:8030"
+      - "8040:8040"
+    depends_on:
+      - postgres
+    environment:
+      postgres_host: postgres
+      postgres_user: graph-node
+      postgres_pass: let-me-in
+      postgres_db: graph-node
+      ipfs: "ipfs.dappnode:5001"
+      ethereum: "mainnet:http://geth.dappnode:8545"
+      GRAPH_LOG: info
+    networks:
+      dncore_network:
+        aliases:
+          - graph-node.dappnode
+    restart: always
+  postgres:
+    image: postgres
+    container_name: DAppNodePackage-postgres.graph.dnp.dappnode.eth
+    ports:
+      - "5432:5432"
+    command:
+      - postgres
+      - "-cshared_preload_libraries=pg_stat_statements"
+    environment:
+      POSTGRES_USER: graph-node
+      POSTGRES_PASSWORD: let-me-in
+      POSTGRES_DB: graph-node
+    volumes:
+      - "graph_data:/var/lib/postgresql/data"
+    networks:
+      dncore_network:
+        aliases:
+          - graph-postgres.dappnode
+    restart: always
