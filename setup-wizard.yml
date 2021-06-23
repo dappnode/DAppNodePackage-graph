@@ -12,10 +12,10 @@ fields:
       - mainnet:http://nethermind.dappnode:8545
       - mainnet:http://openethereum.dappnode:8545
       - mainnet:http://erigon.dappnode:8545
-      - mainnet:http://goerli-geth.dappnode:8545     
-      - mainnet:http://rinkeby.dappnode:8545
-      - mainnet:http://ropsten.dappnode:8545
-      
+      - testnet:http://goerli-geth.dappnode:8545     
+      - testnet:http://rinkeby.dappnode:8545
+      - testnet:http://ropsten.dappnode:8545
+      - development:http://ganache.dappnode:8545
       
     description: >-
       Add an Ethereum RPC endpoint to be used by the Graph Node. Could be changed later on in config view. Make sure you are running th ETH client node you are introducing in this step
