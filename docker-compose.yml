@@ -6,7 +6,7 @@ networks:
 volumes:
   graph_data: {}
 services:
-  graph.dnp.dappnode.eth:
+  graph:
     container_name: DAppNodePackage-graph.graph.dnp.dappnode.eth
     image: "graph.dnp.dappnode.eth.graph.public.dappnode.eth:0.1.0"
     build:
