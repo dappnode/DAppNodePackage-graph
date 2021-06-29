@@ -25,7 +25,7 @@ services:
       postgres_pass: let-me-in
       postgres_db: graph-node
       ipfs: "ipfs.dappnode:5001"
-      ethereum: "mainnet:http://geth.dappnode:8545"
+      ethereum: "mainnet:http://fullnode.dappnode:8545"
       GRAPH_LOG: info
     networks:
       dncore_network:
