@@ -1,5 +1,3 @@
-#ARG UPSTREAM_VERSION
-#FROM graphprotocol/graph-node:${UPSTREAM_VERSION}
-
-FROM graphprotocol/graph-node:latest
+ARG UPSTREAM_VERSION=latest
+FROM graphprotocol/graph-node:${UPSTREAM_VERSION}
 

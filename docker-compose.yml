@@ -11,6 +11,8 @@ services:
     image: "graph.dnp.dappnode.eth.graph.public.dappnode.eth:0.1.0"
     build:
       context: build
+      args:
+        UPSTREAM_VERSION: latest
     ports:
       - "8000:8000"
       - "8001:8001"

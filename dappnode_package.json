@@ -2,7 +2,13 @@
   "name": "graph.dnp.dappnode.eth",
   "version": "0.1.0",
   "description": "The Graph is an indexing protocol for querying networks like Ethereum and IPFS. Anyone can build and publish open APIs, called subgraphs, making data easily accessible.",
-  "upstreamRepo": "graphprotocol/graph-node",
+  "upstream": [
+    {
+      "repo": "graphprotocol/graph-node",
+      "version": "latest",
+      "arg": "UPSTREAM_VERSION"
+    }
+  ],
   "type": "service",
   "author": "DAppNode Association <admin@dappnode.io> (https://github.com/dappnode)",
   "contributors": ["pablo <pablo@dappnode.io> (https://github.com/pablomendezroyo)"],
